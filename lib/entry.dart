@@ -70,8 +70,16 @@ class Entry extends StatelessWidget {
         final theme = Provider.of<ThemeProvider>(context);
         return MaterialApp.router(
           debugShowCheckedModeBanner: false,
-          theme: ThemeData.from(colorScheme: theme.lightScheme),
-          darkTheme: ThemeData.from(colorScheme: theme.darkScheme),
+          theme: ThemeData.from(colorScheme: theme.lightScheme).copyWith(
+            textTheme: ThemeData.from(colorScheme: theme.lightScheme)
+                .textTheme
+                .apply(fontFamily: 'MiSans'),
+          ),
+          darkTheme: ThemeData.from(colorScheme: theme.darkScheme).copyWith(
+            textTheme: ThemeData.from(colorScheme: theme.darkScheme)
+                .textTheme
+                .apply(fontFamily: 'MiSans'),
+          ),
           themeMode: theme.themeMode,
           localizationsDelegates: GlobalMaterialLocalizations.delegates,
           supportedLocales: supportedLocales,

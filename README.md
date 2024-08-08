@@ -3,7 +3,8 @@
 Coriander Player 的使用MiSans字体的fork修改版。
 
 将只会与最新Release版本同步。  
-如果官方版本加入了自定义字体功能，本版本将会停止维护。
+如果官方版本加入了自定义字体功能，本版本将会停止维护。  
+相关Issue：Ferry-200/coriander_player#14
 
 
 ## 版权和许可
